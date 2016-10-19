@@ -13,5 +13,10 @@ g2.group_name = 'puppet server groups'
 g2.hosts = ['192.168.47.189']
 
 
+g3 = templates.NetworkTemplate()
+g3.group_name = 'puppet server groups'
+g3.hosts = ['192.168.47.189']
+
+
 monitored_groups = [g1,g2]
 

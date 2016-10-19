@@ -46,6 +46,24 @@ class memory(generic.BaseService):
                         }
                          }
         
+
+class nic(generic.BaseService):
+    def __init__(self):
+        super(memory,self).__init__()
+        self.name = 'nic_network'
+        self.interval = 120
+        self.plugin_name = 'get_network_info'
+        self.truggers = {
+                'in':{'func':avg,
+                        'minutes':15,
+                        'operator':'gt',
+                        #'threshold':0,
+                        'warning':80,
+                        'critical':90,
+                        'data_type':'percentage'
+                        }
+                         }
+        
         
         
 if __name__ == '__main__':
