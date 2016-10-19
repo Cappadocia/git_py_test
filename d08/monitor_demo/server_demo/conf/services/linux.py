@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #服务的标准模板
 from conf.services import generic  
-from conf.services import data_process
+from conf.services.data_process import avg,last,hit
 
 class cpu(generic.BaseService):
     def __init__(self):
