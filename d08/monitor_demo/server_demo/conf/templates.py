@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from services import linux,Network
+from conf.services import linux
 
 class BaseTemplate(object):
     def __init__(self):
@@ -24,11 +24,9 @@ class LinuxTemplate(BaseTemplate):
         
 class NetworkTemplate(BaseTemplate):
     def __init__(self):
-        super(LinuxTemplate,self).__init__()
+        super(NetworkTemplate,self).__init__()
         self.name = 'NetworkTemplate'
-        self.services =[
-                network.nic
-                        ]        
+        self.services =[linux.nic]        
 
 #测试用例,t1模板 ，t2模板
 # if __name__ =='__main':

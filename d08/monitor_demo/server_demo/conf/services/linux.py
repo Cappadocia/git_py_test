@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #服务的标准模板
-import generic  
-from data_process import avg,hit,last
+from conf.services import generic  
+from conf.services import data_process
 
 class cpu(generic.BaseService):
     def __init__(self):
@@ -51,7 +51,7 @@ class memory(generic.BaseService):
 
 class nic(generic.BaseService):
     def __init__(self):
-        super(memory,self).__init__()
+        super(nic,self).__init__()
         self.name = 'nic_network'
         self.interval = 120
         self.plugin_name = 'get_network_info'
