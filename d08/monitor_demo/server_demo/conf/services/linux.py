@@ -7,8 +7,10 @@ from data_process import avg,hit,last
 class cpu(generic.BaseService):
     def __init__(self):
         super(cpu,self).__init__()
+        #全局唯一
         self.name = 'linux_cpu'
         self.interval = 30
+        #不一定唯一，比如跨平台插件名可能唯一，但是调用的程序可能分平台
         self.plugin_name = 'get_cpu_status'
         self.truggers = {
                 'idle':{'func':avg,
