@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
+#服务的标准模板
 import generic  
 from data_process import avg,hit,last
 
@@ -25,7 +25,7 @@ class cpu(generic.BaseService):
                         'threshold':3,
                         'warning':50,
                         'critical':80,
-                        'data_type':'percentage'
+                        'data_type':'int'
                         },
                          }
         
