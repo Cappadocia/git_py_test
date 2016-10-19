@@ -20,9 +20,17 @@ class LinuxTemplate(BaseTemplate):
                 linux.cpu,
                 linux.memory
                         ]
-#测试用例
+#测试用例,t1模板 ，t2模板
 # if __name__ =='__main':
 #     t = LinuxTemplate()
 #     t.hosts = ['192.168.77.119']
 #     for service in t.services:
+#         service = service()
 #         print(service.name,service.triggers)
+#         
+# if __name__ =='__main':
+#     t2 = LinuxTemplate()
+#     t2.hosts = ['192.168.47.191']
+#     for service in t.services:
+#         service = service()
+#         print(service.name,service.interval)
