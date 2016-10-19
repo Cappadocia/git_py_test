@@ -1,2 +1,7 @@
 eclipse.preferences.version=1
+encoding//d08/monitor_demo/server_demo/conf/hosts.py=utf-8
+encoding//d08/monitor_demo/server_demo/conf/services/data_process.py=utf-8
+encoding//d08/monitor_demo/server_demo/conf/services/generic.py=utf-8
+encoding//d08/monitor_demo/server_demo/conf/services/linux.py=utf-8
+encoding//d08/monitor_demo/server_demo/conf/templates.py=utf-8
 encoding//src/git_test.py=utf-8
