@@ -23,9 +23,11 @@ class LinuxTemplate(BaseTemplate):
 #测试用例,t1模板 ，t2模板
 # if __name__ =='__main':
 #     t = LinuxTemplate()
-#     t.hosts = ['192.168.77.119']
+#     t.hosts = ['192.168.77.119'] 
 #     for service in t.services:
 #         service = service()
+#         if service.name == 'linux_cpu':
+#             service.interval = 90
 #         print(service.name,service.triggers)
 #         
 # if __name__ =='__main':
