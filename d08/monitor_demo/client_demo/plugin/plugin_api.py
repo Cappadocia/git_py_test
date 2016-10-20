@@ -11,3 +11,6 @@ def get_cpu_status():
 
 def get_memory_info():
     return memory.monitor()
+
+def get_network_info():
+    return memory.monitor()

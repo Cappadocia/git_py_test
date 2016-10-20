@@ -20,7 +20,7 @@ server
      		--action_process.py
      		--data_sucker.py
      		--global_setting.py
-     		--main_server.py
+     		--main_server.py 服务端接收程序
      		--redishelper.py
      		--seroalize.py
 client
