@@ -47,7 +47,7 @@ def flush_all_host_configs_into_redis():
     
     for host_ip in applied_hosts:
         host_config = host_config_serializer(host_ip)
-        key = 'HostConfig:s%' %host_ip
+        key = 'HostConfig::s%' %host_ip
         redis.set(key,pickle.dumps(host_config))
     return True
 if __name__ =='__main__':

@@ -1,5 +1,9 @@
 eclipse.preferences.version=1
 encoding//d08/monitor_demo/client_demo/client.py=utf-8
+encoding//d08/monitor_demo/client_demo/plugin/cpu.py=utf-8
+encoding//d08/monitor_demo/client_demo/plugin/load.py=utf-8
+encoding//d08/monitor_demo/client_demo/plugin/memory.py=utf-8
+encoding//d08/monitor_demo/client_demo/plugin/plugin_api.py=utf-8
 encoding//d08/monitor_demo/server_demo/conf/hosts.py=utf-8
 encoding//d08/monitor_demo/server_demo/conf/services/data_process.py=utf-8
 encoding//d08/monitor_demo/server_demo/conf/services/generic.py=utf-8
