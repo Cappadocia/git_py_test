@@ -62,7 +62,7 @@ def report_service_data(server_instance,msg):
         'time_stamp':time.time()
         }
     key = 'StatusData::s%' %host_ip
-    server_instance.redis.set(key,pickle.dumps(service_instance.hosts['hosts']))
+    server_instance.redis.set(key,pickle.dumps(service_instance.hosts['hosts'][host_ip]))
 if __name__ =='__main__':
     #host_config_serializer('192.168.77.119')
     flush_all_host_configs_into_redis()
