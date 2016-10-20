@@ -4,6 +4,7 @@
 import global_settings
 
 import pickle,time
+from redishelper import Redishelper
 
 from conf import hosts
 
@@ -36,10 +37,22 @@ def host_config_serializer(host_ip):
         configs['services'][service.name] = [service.interval,service.plugin_name,0]
         
     return configs
-        
-        
+
+def flush_all_host_configs_into_redis():
+    applied_hosts = []
+    for group in hosts.monitored_groups:
+        applied_hosts.extend(group.hosts)
+    #去重
+    applied_hosts = set(applied_hosts)
+    
+    for host_ip in applied_hosts:
+        host_config = host_config_serializer(host_ip)
+        key = 'HostConfig:s%' %host_ip
+        redis.set(key,pickle.dumps(host_config))
+    return True
 if __name__ =='__main__':
-    host_config_serializer('192.168.77.119')
+    #host_config_serializer('192.168.77.119')
+    flush_all_host_configs_into_redis()
         
         
          

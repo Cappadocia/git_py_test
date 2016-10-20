@@ -23,3 +23,9 @@ server
      		--main_server.py
      		--redishelper.py
      		--seroalize.py
+client
+     --plugin
+     --__init__.py
+     --client.py
+     --redishelper.py
+     
