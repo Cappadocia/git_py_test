@@ -51,6 +51,18 @@ def flush_all_host_configs_into_redis():
         key = 'HostConfig::s%' %host_ip
         redis.set(key,pickle.dumps(host_config))
     return True
+
+
+def report_service_data(server_instance,msg):
+    host_ip = msg['ip']
+    service_status_data = msg['data']
+    service_name = msg['service_name']
+    server_instance.hosts['hosts'][host_ip][service_name] ={
+        'data':service_status_data,
+        'time_stamp':time.time()
+        }
+    key = 'StatusData::s%' %host_ip
+    server_instance.redis.set(key,pickle.dumps(service_instance.hosts['hosts']))
 if __name__ =='__main__':
     #host_config_serializer('192.168.77.119')
     flush_all_host_configs_into_redis()
