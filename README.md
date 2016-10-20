@@ -25,6 +25,11 @@ server
      		--seroalize.py
 client
      --plugin
+          --__init__.py
+          --cpu.py
+          --load.py
+          --memory.py
+          --plugin_api.py
      --__init__.py
      --client.py
      --redishelper.py
