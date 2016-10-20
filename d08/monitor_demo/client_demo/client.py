@@ -4,6 +4,9 @@ import threading
 import redishelper
 import pickle
 import time
+
+from plugin import plugin_api
+
 #host_ip = '本机IP地址'
 host_ip = '192.168.77.119'
 
@@ -42,9 +45,22 @@ class MonitorClient(object):
                 time.sleep(1)       
         else:
             print('---could not find any configurations for this host----')
+    
+    def format_msg(self,key,value):
+        msg  = {key:value}
+        return pickle.dumps(msg)
+    
+    
     def task(self,service_name,plugin_name):
         print( '----going to run service ',service_name,plugin_name)
-    
+        func = getattr(plugin_api,plugin_name)
+        result = func()
+        #发布到服务端，发布频道是87.7，序列号发布值
+        msg = self.format_msg('report_service_data', {'ip':host_ip,
+                                                      'service_name':service_name,
+                                                      'data':result,})
+        #self.redis.publish(pickle.dumps(result))
+        self.redis.publisc(msg)
     def run(self):
         self.handle()
     

@@ -21,6 +21,7 @@ def host_config_serializer(host_ip):
 #     host_config_serializer('192.168.77.119')
 
     applied_services = []
+    #不确定configs 里会不会加其他，为以后留扩展余地
     configs = {
                 'services':{},
                 #'refresh_configs_interval':
