@@ -5,6 +5,10 @@ import socket
 
 def handle_request(client):
     buf = client.recv(1024)
+    #HTTP协议状态码
+    #client.send("HTTP/1.1 200 OK\r\n")
+    #请求头，页面展示什么类型
+    #client.send('Content-Type:text/html\r\n\r\n')
     client.send(bytes('hello,server',encoding = 'utf8'))
     
 def main():
