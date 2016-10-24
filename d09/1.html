@@ -6,8 +6,127 @@
 	</head>
 	
 	<body>
+		<!--标题-->
+		<h1>h1h1h1h1h1</h1>
+		<h2>h2h2h2h1h2</h2>
+		<h3>h3h3h3h3h3</h3>
+		<h4>h4h4h4h4h4</h4>
+		<h5>h5h5h5h5h5</h5>
+		<h6>h6h6h6h6h6</h6>
 		<!--注释-->
-		<a href='www.baidu.com' target='_blank'>a标签</a>
+		<a href='www.hundsun.com' target='_blank' dasha='ccx'>a标签</a>
+		<!--锚点-->
+		<!--标签ID不可重复，想用哪个标签就得定义ID-->
+		<!--单引号和双引号没区别-->
+		<dir>目录</dir>
+			<a href='#id1'>第1章</a>
+			<a href='#id2'>第2章</a>
+			<a href='#id3'>第3章</a>
+		<dir>内容</dir>
+			<dir id='id1'>
+				<p>第1章内容</p>
+				<p>第1章内容</p>
+				<p>第1章内容</p>
+				<p>第1章内容</p>
+				<p>第1章内容</p>
+				<p>第1章内容</p>
+			</dir>
+			<dir id='id2' style = 'height:200px;background-color:red;'>第2章内容</dir>
+			<dir id='id3' style = 'height:100px;'>第3章内容</dir>
+		
+		<!--select 标签，选择，单选，多选,分组-->
+		<select>
+			<option value='1'>杭州</option>
+			<option value='2'>宁波</option>
+			<option value='3' selected ='selected'>温州</option>
+		</select>
+		<select size="2">
+			<option>杭州</option>
+			<option>宁波</option>
+			<option>温州</option>
+			<option>温州</option>
+		</select>
+		<select multiple='multiple' size='3'>
+			<option>杭州</option>
+			<option>宁波</option>
+			<option>温州</option>
+			<option>温州</option>		
+		</select>
+		<select>
+			<optgroup label='浙江'>
+				<option>杭州</option>
+				<option>宁波</option>
+				<option>温州</option>
+				<option>温州</option>	
+			</optgroup>
+			<optgroup label='江苏'>
+				<option>南京</option>
+				<option>苏州</option>
+				<option>无锡</option>
+				<option>常州</option>	
+			</optgroup>
+		</select>
+		<br/>
+		<!--input 系列标签-->
+		<input type='text' maxlength='5'/>
+		<input type='password'/>
+		<br/>
+		<input type='checkbox'/>
+		<input type='checkbox'/>
+		<input type='checkbox'/>
+		<br/>
+		男：<input type='radio' name='相同就互斥'/>
+		女：<input type='radio' name='相同就互斥'/>
+		保密：<input type='radio' name='相同就互斥'/>
+		<br/><br/>
+		<input type='button' value='提交'/>
+		<input type='submit' value='提交'/>
+		<br/><br/>
+		<br/><br/>
+		<input type='file'/>
+		
+		<!--多行-->
+		<br/><br/>
+		<textarea>多行输入框</textarea>
+		
+		<!--表单可以和后台程序交互-->
+		<br/><br/><br/><br/>
+		<form action='/'>
+			Name:<input type='test'/>
+			Passwd:<input type='password'/>
+			<!--button可以和JS联合做一些定制，不一定会提交-->
+			<input type='button' value='提交'/>
+			<!--submit 一定会提交表单到后台-->
+			<input type='submit' value='提交'/>
+		</form>
+		<br/><br/><br/><br/>
+		<!--label标签,可以做联合-->
+		
+		<label for ='name3'>
+			姓名：<input id = 'name3' type='text'></input>
+		</label>
+		<br/><br/><br/><br/>
+		<!--列表 点，排序，缩进-->
+		<ul>
+			<li>ul,li</li>
+			<li>ul,li</li>
+			<li>ul,li</li>
+		</ul>
+		<ol>
+			<li>ol,li</li>
+			<li>ol,li</li>
+			<li>ol,li</li>
+		</ol>
+		<dl>
+			<dt>浙江</dt>
+			<dd>杭州</dd>
+			<dd>温州</dd>
+			<dt>江苏</dt>
+			<dd>南京</dd>
+			<dd>苏州</dd>
+		</dl>
+		
+			
 		<div>&lt;div;&gt;空格;&nbsp;符号都有固定的标识</div>
 		<p>段落</p>
 		<div>换行符<br/>换行符</div>
@@ -16,6 +135,8 @@
 		<div>div标签是万能，通过div可以加上CSS伪装成其他标签，东西都是自己定制化的</div>
 		<span>内联标签：自己多长占多长</span>
 		<span>内联标签：横向从左至右堆叠</span>
+		
+		
 		
 	</body>	
 	
