@@ -3,16 +3,86 @@
 	<head>
 		<meta http-equiv='content-tyoe' content='text/html:charset=utf-8'>
 		<title>js1</title>
-
+		<style>
+			.show{
+			
+			}
+			.hide(
+				display:none;
+			)
+		</style>
 	</head>
 	<body>
+		<!--
 		<div>asdasdadad</div>
 		<script src='js/ccx.js'></script>
-		<!--
+		
 		<script tyoe='text/javascript'>
 		alert('xxxxxxx');
 		</script>
 		-->
+		<form id='f1' action = 'http://www.baidu.com/s?' method='GET'>
+			<input type='text' name='wd' />
+			<!--
+			<input type='submit' value='提交'/>
+			-->
+			
+			<input type='button' value='百度搜索' onclick='Foo();'/>
+			<br/><br/>
+			
+		</form>
+		<hr/>
+		<!--定时器-->
+		<div style='width:500px;background-color:#ddd;'>
+			<div id='process' 
+			style='width:10%;background-color:gray;height:10px;'></div>
+		</div>
+		<!--
+		<div id='t1 class ='show'>内容</div>
+		-->
+		<!--
+		<script src='js/ccx.js'></script>
+		-->
+		<script src='js/jquery-3.1.1.js'></script>
+		<script type='text/javascript'>
+		/*方法一
+		var tag = document.createElement('a');
+		tag.href = 'http://www.autohome.com.cn';
+		tag.innerText = 'dian wo a ';
+		var id1 = document.getElementById('t1');
+		id1.appendChild(tag);
+		*/
+		//方法二
+		/*
+		var tag="<a href='http://baidu.com'>baidu</a>";
+		var id1 = document.getElementById('t1');
+		id1.innerHTML=tag;
+		*/
+		/*
+		var id1 = document.getElementById('t1');
+		id1.className ='hide';
+		*/
+		
+		function Foo(){
+			document.getElementById('f1').submit();
+		}
+		
+		pro = 1;
+		
+		function Poo(){
+			var id=document.getElementById('process');
+			pro = pro +1;
+			if (pro>100){
+				clearInterval(interval)
+			}else{
+				id.style.width =pro + '%';
+			}
+		}
+		interval = setInterval('Poo()',100);
+		
+		
+		
+		</script>
 	</body>
 	
 </html>

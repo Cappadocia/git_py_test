@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv='content-tyoe' content='text/html:charset=utf-8'>
+		<title>欢第三方大幅度发鬼地方个风格&nbsp;&nbsp;</title>
+		<style>
+			.gray{
+				color:gray;
+			}
+			.black(
+				color:black;
+			)
+		</style>
+	</head>
+	<body>
+		<form id='f1' action = 'http://www.baidu.com/s?' method='GET'>
+			<input type ='text' name='wd' class='gray' id='tip' value='请输入关键字'
+			onfocus='Enter();' onblur='Leave();'/>
+
+			
+			<input type='button' value='百度搜索' onclick='Foo();'/>
+			
+		</form>
+
+		
+		
+		<!--
+		<script src='js/ccx.js'></script>
+		-->
+		<script type='text/javascript'>
+			function Enter(){
+				//获取标签
+				var id=document.getElementById('tip')
+				id.className='black';
+				if(id.value=='请输入关键字'||id.value.trim()==''){
+					id.value = ''
+				}
+			}
+			function Leave(){
+				var id=document.getElementById('tip')
+				var val = id.value;
+				if(val.length==0||id.value.trim()==''){
+					id.value = '请输入关键字'
+					id.className = 'gray';
+				}else{
+					id.className = 'black';
+				}
+			}
+			function Foo(){
+			document.getElementById('f1').submit();
+		}
+			function Go(){
+				var content = document.title;
+				var firstChar = content.charAt(0)
+				var sub =  content.substring(1,content.length)
+				document.title = sub + firstChar;
+			}
+			setInterval('Go()',1000)
+		</script>
+	</body>
+	
+</html>
