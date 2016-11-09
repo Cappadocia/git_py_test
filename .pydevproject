@@ -7,6 +7,6 @@
 <pydev_property name="org.python.pydev.PYTHON_PROJECT_INTERPRETER">python3</pydev_property>
 <pydev_variables_property name="org.python.pydev.PROJECT_VARIABLE_SUBSTITUTION">
 <key>DJANGO_MANAGE_LOCATION</key>
-<value>mysite/manage.py</value>
+<value>django_test/manage.py</value>
 </pydev_variables_property>
 </pydev_project>
